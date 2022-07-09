@@ -1,0 +1,2 @@
+# Removing-Ambiguity-in-Residential-Addresses-of-Lahor
+This code takes an unstructured, difficult to read address and returns its structured forms along with its geo coordinates. The test file provides an example of the output. The predict function in the main file takes a panda data frame of the address and returns a corresponding data frame. Some files have not been pushed which can be provided after relevant background checks, beacuse of the sensitivity of location data.
