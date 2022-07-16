@@ -274,7 +274,11 @@ def locality(address,locality_name):
             address_locality=locality_name.query(f'`society key word`=="{society[0]}" and `locality key word`=="{locality[0]}"')['name'].iloc[0]
             return address_locality,(minval_society,word_used_society),(minval_locality,word_used_locality),(minval_add,word_used_add)
         else:
-            add_,minval_add,word_used_add=key_word_LD(address,add_key_words)
+            address_locality=locality_name.query(f'`society key word`=="{society[0]}" and `locality key word`=="{locality[0]}"')['last_resort_add'].iloc[0]
+            if address_locality == 'dha phase 8':
+                add_,minval_add,word_used_add=key_word_LD(original_address,add_key_words)
+            else:
+                add_,minval_add,word_used_add=key_word_LD(address,add_key_words)
             add__len =[]
             for x in add_:
                 if '/' in x:
