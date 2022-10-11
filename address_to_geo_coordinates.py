@@ -608,7 +608,7 @@ def get_geo_coordintaes(locality,block,house,zameen_data,dict_locality_blocks):
                     for x in range(len(zameen_data[index]['plots'])):
                         if zameen_data[index]['plots'][x]['plot_number']==house:
                             return 'accurate upto house',np.array(zameen_data[index]['plots'][x]['geometry']['coordinates'])+off_set,get_url(index,x,zameen_data)
-                    return 'accurate upto block',zameen_data[index]['plots'][0]['geometry']['coordinates'],get_url(index,0,zameen_data)
+                    return 'accurate upto block',zameen_data[index]['plots'][0]['geometry']['coordinates']+off_set,get_url(index,0,zameen_data)
                 else:
                     continue
             else:
